@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name" translatable="false">FishFeeder</string>
+    <string name="could_not_create_message">Could not create feeding time</string>
+    <string name="failure">Failure</string>
+    <string name="item_was_removed">Item was removed from the list.</string>
+    <string name="undo">UNDO</string>
+    <string name="plus_sign" translatable="false">+</string>
+    <string name="manual">MANUAL</string>
+    <string name="amount">Amount</string>
+    <string name="feeding_time">Feeding time</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FishFeeder</string>
+    <string name="could_not_create_message">Det gick inte at skapa matningstid</string>
+    <string name="failure">Misslyckande</string>
+    <string name="item_was_removed">Tiden blev borttagen från listan</string>
+    <string name="undo">ÅNGRA</string>
+    <string name="manual">MANUELL</string>
+    <string name="amount">Mängd</string>
+    <string name="feeding_time">Matningstid</string>
+    <string name="cancel">Avbryt</string>
+    <string name="ok">OK</string>
+</resources>
