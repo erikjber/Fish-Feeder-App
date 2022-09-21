@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements UpdateListener
     private RecyclerView recyclerView;
     private CoordinatorLayout coordinatorLayout;
     private FeedingTimeAdapter mAdapter;
+    private View progressBarHolder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements UpdateListener
 
         st.crosscheck.fishfeeder.databinding.ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        progressBarHolder = binding.getRoot().findViewById(R.id.progressBarHolder);
 
         recyclerView = binding.getRoot().findViewById(R.id.store_listview);
         coordinatorLayout = binding.getRoot().findViewById(R.id.coordinatorLayout);
@@ -62,8 +64,7 @@ public class MainActivity extends AppCompatActivity implements UpdateListener
     public void onResume()
     {
         super.onResume();
-        client = new Client(this);
-        client.addUpdateListener(this);
+        client = new Client(this, this);
     }
 
     @Override
@@ -199,6 +200,19 @@ public class MainActivity extends AppCompatActivity implements UpdateListener
 
             enableSwipeToDeleteAndUndo();
         });
+        // Remove progressbar
+        if (this.progressBarHolder != null)
+        {
+            Handler mainHandler = new Handler(Looper.getMainLooper());
+            mainHandler.post(new Runnable()
+            {
+                @Override
+                public void run()
+                {
+                    progressBarHolder.setVisibility(View.GONE);
+                }
+            });
+        }
     }
 
     /**

@@ -41,9 +41,13 @@ public class Client
     private final List<FeedingTime> feedingTimes = new ArrayList<>();
     private final List<UpdateListener> updateListeners = new ArrayList<>();
 
-    public Client(Context context)
+    public Client(Context context, UpdateListener listener)
     {
         this.context = context;
+        if(listener != null)
+        {
+            addUpdateListener(listener);
+        }
         new Thread(() -> {
             listenForBeacon();
             updateState();
