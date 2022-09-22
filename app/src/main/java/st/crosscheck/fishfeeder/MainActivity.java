@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements UpdateListener
     public void onResume()
     {
         super.onResume();
+        progressBarHolder.setVisibility(View.VISIBLE);
         client = new Client(this, this);
     }
 
