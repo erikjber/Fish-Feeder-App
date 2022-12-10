@@ -10,3 +10,5 @@ https://www.thingiverse.com/thing:5517562
 
 The Raspberry Pi Pico W firmware for the system can be found here:   
 https://github.com/erikjber/Fish-Feeder-Raspberry-Pico-W
+
+The project has been [covered in the December 2022 issue of MagPi](https://magpi.raspberrypi.com/issues/124/pdf/download), the official Raspberry Pi magazine.
