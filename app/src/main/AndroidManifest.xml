@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="st.crosscheck.fishfeeder">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -23,7 +22,6 @@
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.FishFeeder.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
